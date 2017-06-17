@@ -1022,6 +1022,30 @@ Pen.prototype.write = function(msg) {
     this.species = species;
     this.gender = gender;
   }
+
+  /* Step 81
+   *
+   * Declare an Animal method called isWarmBlooded that returns
+   * a true if the animal species is warm-blooded, false if cold-blooded.
+   * Three species are provided below.  If the species is anything else,
+   * return the string indicated below.
+   *
+   *            this.species =>
+   *                "Fish"   => false
+   *                "Monkey" => true
+   *                "Bird"   => true
+   *       Any other species => "Could not determine if warm-blooded"
+   *
+   */
+   isWarmBlooded() {
+    var warmbld = ['Monkey', 'Bird'];
+    if(warmbld.includes(this.species)) {
+      return true;
+    } else if (this.species === 'Fish') {
+      return false;
+    }
+    return "Could not determine if warm-blooded";
+   }
  }
 
 
@@ -1210,20 +1234,6 @@ var dinner = new Meal(dnr);
  */
 
 
-/* Step 81
- *
- * Declare an Animal method called isWarmBlooded that returns
- * a true if the animal species is warm-blooded, false if cold-blooded.
- * Three species are provided below.  If the species is anything else,
- * return the string indicated below.
- *
- *            this.species =>
- *                "Fish"   => false
- *                "Monkey" => true
- *                "Bird"   => true
- *       Any other species => "Could not determine if warm-blooded"
- *
- */
 
 
 /* Step 82

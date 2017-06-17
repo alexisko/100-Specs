@@ -1120,6 +1120,11 @@ class Vehicle {
  * Lightbulb class
  * @param {boolean} isOn Whether the light is on or off
  */
+ class Lightbulb {
+  constructor(isOn) {
+    this.isOn = isOn;
+  }
+ }
 
 
 /**

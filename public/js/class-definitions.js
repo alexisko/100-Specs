@@ -4,6 +4,7 @@
  * then set it's value to null;
  *
  */
+ var unicorn = null;
 
 
 /* Step 2
@@ -12,6 +13,7 @@
  * then assign it to be the value of "Atari"
  *
  */
+ var videogame_system = 'Atari';
 
 
 /* Step 3
@@ -20,6 +22,7 @@
  * and assign the value of sahara_animal to "The Addax"
  *
  */
+ var sahara_animal = 'The Addax';
 
 
 /* Step 4
@@ -29,6 +32,7 @@
  * each planet in our solar system, in order of distance from the sun
  * Capitalize the names.
  */
+ var planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune'];
 
 
 /* Step 5
@@ -38,6 +42,7 @@
  * each galilean moon of Jupiter
  *
  */
+ var galilean_moons = ['io', 'europa', 'ganymede', 'callisto'];
 
 
 /* Step 6 φ
@@ -46,6 +51,7 @@
  * and assign the value of golden_ratio to 1.61803398874
  *
  */
+ var golden_ratio = 1.61803398874;
 
 
 /* Step 7
@@ -54,6 +60,7 @@
  * and assign the value of earths_water_composition to 0.71
  *
  */
+ var earths_water_composition = 0.71;
 
 
 /* Step 8
@@ -62,6 +69,7 @@
  * and assign the value of club_name to "Fight Club"
  *
  */
+ var club_name = 'Fight Club';
 
 
 /* Step 9
@@ -73,6 +81,11 @@
  *   male    => "male"
  *   unknown => undefined
  */
+ var gender = {
+  female: 'female',
+  male: 'male',
+  unknown: undefined
+ };
 
 
 /* Step 10
@@ -87,6 +100,12 @@
  *   gender  => gender.female
  *
  */
+ var princess_leia = {
+  name: 'Leia Organa',
+  money: 890,
+  age: 20,
+  gender: gender.female
+ };
 
 
 /* Step 11
@@ -100,6 +119,12 @@
  *   jsonformatter.curiousconcept.com => "104.28.5.70"
  *
  */
+ var domains = {
+  'ycombinator.com': "198.41.190.47",
+  'laughingsquid.com': "162.159.247.97",
+  'slumlordhosting.com': "198.61.179.126",
+  'jsonformatter.curiousconcept.com': "104.28.5.70"
+ };
 
 
 /* Step 12
@@ -115,7 +140,14 @@
  *   Konqueror  => "konqueror.org"
  *
  */
-
+var browsers = {
+  Chromium: "google.com",
+  Safari: "apple.com",
+  Opera: "opera.com",
+  Firefox: "mozilla.org",
+  Sleipnir: "fenrir-inc.com",
+  Konqueror: "konqueror.org"
+};
 
 /* Step 13
  *
@@ -133,6 +165,22 @@
  *  isDouble  => true
  *
  */
+ var colors = {
+  red: "#F0280A",
+  orange: "#FF8800",
+  yellow: "#FFDD00",
+  green: "#51AB0C",
+  blue: "#1593ED",
+  indigo: "#5215ED",
+  violet: "#A915ED"
+ };
+
+ var rainbow = {
+  colors: this.colors,
+  isDouble: true
+ };
+
+
 
 
 /* Step 14
@@ -148,6 +196,7 @@
  * "Bieber Linux"
  *
  */
+ var linuxFlavors = ['Gentoo', 'Fedora', 'Debian', 'Slackware', 'Red Hat', 'Bieber Linux'];
 
 
 /* Step 15
@@ -162,7 +211,7 @@
  * "cytosine"
  *
  */
-
+var DNA = ['nucleatides', 'guanine', 'adenine', 'thymine', 'cytosine'];
 
 /* Step 16
  *
@@ -175,6 +224,12 @@
  * Surface      => 320
  *
  */
+ var laptopCosts = {
+  MacBook: 1500,
+  Alienware: 2500,
+  HP: 499,
+  Surface: 320
+ };
 
 
 /* Step 17
@@ -191,6 +246,7 @@
  * "Species"
  *
  */
+ var livingOrganismClassification = ['Kingdom', 'Phylum', 'Class', 'Order', 'Family', 'Genus', 'Species'];
 
 
 /* Step 18
@@ -205,6 +261,7 @@
  * "cvs"
  *
  */
+ var scmList = ['git', 'svn', 'mercurial', 'bazaar', 'cvs'];
 
 
 /* Step 19
@@ -224,6 +281,14 @@
  *                  "Golden"
  *
  */
+ var beers = {
+  IPA: "Ale",
+  Lager: "Strong",
+  Heffeweisen: "German",
+  Stout: ['Thick', 'Dark'],
+  Porter: "Bitter",
+  Ale: ['Light', 'Golden']
+ };
 
 
 /* Step 20
@@ -234,6 +299,9 @@
  * @return {String}
  *
  */
+ function sahara_river() {
+  return 'Nile River';
+ }
 
 
 /* Step 21
@@ -246,7 +314,9 @@
  * @return {Number}
  *
  */
-
+function addNumbers(x, y) {
+  return x + y;
+}
 
 /* Step 22
  *
@@ -259,6 +329,12 @@
  * @return {Bool}
  *
  */
+ function installLinux(linux) {
+  if(this.linuxFlavors.indexOf(linux) >= 0) {
+    return true;
+  }
+  return false;
+ }
 
 
 /* Step 23
@@ -278,6 +354,20 @@
  * @return {Bool when False, String when True}
  *
  */
+ function drink(beer) {
+  for(var prop in this.beers) {
+    if(prop === beer) {
+      if(prop === 'Stout') {
+        return 'This ' + prop + ' is ' + this.beers.Stout[0] + ' and ' + this.beers.Stout[1] + '.';
+      } else if(prop === 'Ale') {
+        return 'This ' + prop + ' is ' + this.beers.Ale[0] + ' and ' + this.beers.Ale[1] + '.';
+      } else {
+        return "This " + prop + " is " + this.beers[prop] + '.';
+      }
+    }
+  }
+  return false;
+ }
 
 
 /* Step 24
@@ -291,6 +381,14 @@
  * @return {String if true else return false}
  *
  */
+ function browseURL(browser) {
+  for(var prop in this.browsers) {
+    if(prop === browser) {
+      return this.browsers[prop];
+    }
+  }
+  return false;
+ }
 
 
 /* Step 25
@@ -302,6 +400,16 @@
  * @return {String}
  *
  */
+ function listLivingOrgClass() {
+  var ul = '<ul>';
+  for(var i = 0; i < this.livingOrganismClassification.length; i++) {
+    ul += '<li>';
+    ul += this.livingOrganismClassification[i];
+    ul += '</li>';
+  }
+  ul += '</ul>';
+  return ul;
+ }
 
 
 /* Step 26
@@ -323,7 +431,14 @@
  * @return {String}
  *
  */
-
+ function favoritePlanet(curPlanet) {
+  var randomPlanet = this.planets[Math.floor(Math.random() * this.planets.length)];
+  if(this.planets.indexOf(curPlanet) >= 0) {
+    return "I'm from " + curPlanet + ", but I wish I could go to " + randomPlanet + ".";
+  } else {
+    return curPlanet + " is not a planet!";
+  }
+ }
 
 /* Step 27
  *
@@ -347,6 +462,38 @@
  *   earnMoney
  *
  */
+function Person(name, money, age, gender) {
+  this.name = name;
+  this.money = money;
+  this.age = age;
+  this.gender = gender;
+}
+
+Person.prototype.spendMoney = function(amt) {
+  this.money = this.money - amt;
+};
+
+Person.prototype.earnMoney = function(amt) {
+  this.money = this.money + amt;
+};
+
+ // ES6 VERSION
+ // class Person {
+ //  constructor(name, money, age, gender) {
+ //    this.name = name;
+ //    this.money = money;
+ //    this.age = age;
+ //    this.gender = gender;
+ //  }
+
+ //  spendMoney(amt) {
+ //    this.money = this.money - amt;
+ //  }
+
+ //  earnMoney(amt) {
+ //    this.money = this.money + amt;
+ //  }
+ // }
 
 
 /* Step 28
@@ -360,6 +507,14 @@
  * @return {String}
  *
  */
+ function purchaseLaptop(laptop) {
+  for(var prop in this.laptopCosts) {
+    if(prop === laptop) {
+      return this.laptopCosts[prop].toString();
+    }
+  }
+  return -1;
+ }
 
 
 /* Step 29
@@ -373,6 +528,12 @@
  * @return {Bool}
  *
  */
+ function canTalkAbout(club) {
+  if(club === this.club_name) {
+    return false;
+  }
+  return true;
+ }
 
 
 /* Step 30
@@ -395,6 +556,13 @@
  *   write
  *
  */
+function Pen(color) {
+  this.color = color;
+}
+
+Pen.prototype.write = function(msg) {
+  return this.color + ": " + msg;
+};
 
 
 /* Step 31
@@ -423,6 +591,21 @@
  *   grow
  *
  */
+ function Garden(numOfPlants) {
+  this.plantsTotal = numOfPlants;
+  this.isWatered = false;
+ }
+
+ Garden.prototype.water = function () {
+  this.isWatered = true;
+ };
+
+ Garden.prototype.grow = function() {
+  if(this.isWatered === true) {
+    this.plantsTotal++;
+  }
+  return false;
+ };
 
 
 /* Step 32
@@ -441,6 +624,17 @@
  *   removePlanet
  *
  */
+ function SolarSystem() {
+  this.planets = [];
+ }
+
+ SolarSystem.prototype.addPlanet = function (newPlanet) {
+  this.planets.push(newPlanet);
+ };
+
+ SolarSystem.prototype.removePlanet = function () {
+  this.planets.pop();
+ };
 
 
 /* Step 33
@@ -475,6 +669,33 @@
  *   marries
  *
  */
+ function PrincessLeia(name, money, age, gender) {
+  Person.call(this, name, money, age, gender);
+  this.isInTrouble = null;
+ }
+
+ PrincessLeia.prototype = Object.create(Person.prototype, {
+  constructor: PrincessLeia
+ });
+
+ PrincessLeia.prototype.shootsGun = function() {
+  this.isInTrouble = false;
+  return 'Leia shoots her gun wildly';
+ };
+
+ PrincessLeia.prototype.getsInTrouble = function() {
+  this.isInTrouble = true;
+  return "Help me Obi-wan Kenobi, you're my only hope";
+ };
+
+ PrincessLeia.prototype.marries = function(prospective) {
+  if(prospective === 'Han Solo') {
+    return true;
+  } else if(prospective === 'Luke Skywalker') {
+    return 'Gross!';
+  }
+  return false;
+ };
 
 
 /* Step 34
@@ -494,6 +715,17 @@
  *   staplePapers
  *
  */
+ function Stapler(color, maxPapers) {
+  this.color = color;
+  this.maxPapers = maxPapers;
+ }
+
+ Stapler.prototype.staplePapers = function(num) {
+  if(num <= this.maxPapers) {
+    return true;
+  }
+  return false;
+ };
 
 
 /* Step 35
@@ -534,6 +766,47 @@
  *   addDiscovery
  *
  */
+ function Scientist(name, money, age, gender) {
+  Person.call(this, name, money, age, gender);
+  this.disciplines = [];
+  this.discoveries = [];
+ }
+
+ Scientist.prototype = Object.create(Person.prototype, {
+  constructor: Scientist
+ });
+
+ Scientist.prototype.addDiscipline = function (str) {
+  this.disciplines.push(str);
+  return this.disciplines;
+ };
+
+ Scientist.prototype.checkDiscipline = function(str) {
+  if(this.disciplines.indexOf(str) >= 0) {
+    return true;
+  }
+  return false;
+ };
+
+ Scientist.prototype.addDiscovery = function(str) {
+  var newDiscoveries = "I discovered ";
+  if(str) {
+    this.discoveries.push(str);
+    if(this.discoveries.length > 2) {
+      newDiscoveries += this.discoveries[0];
+      for(var i = 1; i < this.discoveries.length-1; i++) {
+        newDiscoveries += ", ";
+        newDiscoveries += this.discoveries[i];
+      }
+      newDiscoveries += ", and " + this.discoveries[this.discoveries.length-1] + ".";
+      return newDiscoveries;
+    } else if(this.discoveries.length === 2) {
+      return newDiscoveries + this.discoveries[0] + " and " + this.discoveries[1] + ".";
+    } else {
+      return newDiscoveries + this.discoveries[0] + ".";
+    }
+  }
+ };
 
 
 /* Step 36

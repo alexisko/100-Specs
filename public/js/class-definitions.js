@@ -1061,6 +1061,20 @@ class Vehicle {
     this.make = make;
     this.model = model;
   }
+
+  /* Step 82
+   *
+   * Declare a Vehicle method called drive that accepts a parameter
+   * called streetName.  If streetName is a string and is not empty,
+   * return "Driving on {streetName}", else return "Driving forward".
+   *
+   */
+   drive(streetName) {
+    if(streetName) {
+      return "Driving on " + streetName;
+    }
+    return "Driving forward";
+   }
 }
 
 /**
@@ -1230,17 +1244,6 @@ var dinner = new Meal(dnr);
  /* Steps 81 to 90
  *
  * Create methods
- *
- */
-
-
-
-
-/* Step 82
- *
- * Declare a Vehicle method called drive that accepts a parameter
- * called streetName.  If streetName is a string and is not empty,
- * return "Driving on {streetName}", else return "Driving forward".
  *
  */
 

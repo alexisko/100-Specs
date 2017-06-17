@@ -1052,8 +1052,9 @@ class Vehicle {
   constructor(sides) {
     if(sides >= 3) {
       this.sides = sides;
+    } else {
+      this.sides = null;
     }
-    this.sides = null;
   }
  }
 
@@ -1167,8 +1168,8 @@ var civic = new Vehicle('Honda', 'Civic');
 var forte = new Vehicle('KIA', 'Forte');
 
 // Create 2 shapes with different numbers of sides
-var square;
-var hexagon;
+var square = new Shape(4);
+var hexagon = new Shape(6);
 
 // Create 2 boxes
 var catBox;

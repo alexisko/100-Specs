@@ -1094,6 +1094,31 @@ class Vehicle {
       this.sides = null;
     }
   }
+
+  /* Step 83
+  *
+  * Declare a Shape method called getType that returns a string
+  * containing the type of shape based on the sides property.
+  *
+  *       this.sides =>
+  *                3 => "triangle"
+  *                4 => "quadrilateral"
+  *                5 => "pentagon"
+  *                6 => "hexagon"
+  *                7 => "heptagon"
+  *                8 => "octagon"
+  *                9 => "nonagon"
+  *               10 => "decagon"
+  * Any other number => "Could not determine type"
+  *
+  */
+  getType() {
+    var arr = ['', '', 'triangle', 'quadrilateral', 'pentagon', 'hexagon', 'heptagon', 'octagon', 'nonagon', 'decagon'];
+    if(this.sides >= 3 && this.sides <= 10) {
+      return arr[this.sides-1];
+    }
+    return "Could not determine type";
+  }
  }
 
 
@@ -1244,25 +1269,6 @@ var dinner = new Meal(dnr);
  /* Steps 81 to 90
  *
  * Create methods
- *
- */
-
-
- /* Step 83
- *
- * Declare a Shape method called getType that returns a string
- * containing the type of shape based on the sides property.
- *
- *       this.sides =>
- *                3 => "triangle"
- *                4 => "quadrilateral"
- *                5 => "pentagon"
- *                6 => "hexagon"
- *                7 => "heptagon"
- *                8 => "octagon"
- *                9 => "nonagon"
- *               10 => "decagon"
- * Any other number => "Could not determine type"
  *
  */
 

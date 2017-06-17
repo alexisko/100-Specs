@@ -1133,7 +1133,11 @@ class Vehicle {
  * Cookie class
  * @param {string} flavor The cookie's flavor
  */
-
+class Cookie {
+  constructor(flavor) {
+    this.flavor = flavor;
+  }
+}
 
 /**
  * Step 59

@@ -1303,6 +1303,29 @@ class Cookie {
   constructor(foods) {
     this.foods = foods;
   }
+
+  /* Step 90
+  *
+  * Declare a Meal method called containsJunkFood that returns true if
+  * at least one of the items in the foods array is junk food, false otherwise.
+  * To check if the food item is junk food, create an array called
+  * junkFood containing the following strings: "chips", "soda", "ice cream",
+  * "popcorn", and "candy".
+  *
+  * Use Array's indexOf method to check if the foods array contains junk food.
+  * Note that if an element is not found in the array, indexOf returns -1.
+  * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+  *
+  */
+  containsJunkFood() {
+    var junkFood = ['chips', 'soda', 'ice cream', 'popcorn', 'candy'];
+    for(var i = 0; i < junkFood.length; i++) {
+      if(this.foods.indexOf(junkFood[i]) >= 0) {
+        return true;
+      }
+    }
+    return false;
+  }
  }
 
 
@@ -1362,21 +1385,7 @@ var dinner = new Meal(dnr);
  *
  */
 
-
- /* Step 90
- *
- * Declare a Meal method called containsJunkFood that returns true if
- * at least one of the items in the foods array is junk food, false otherwise.
- * To check if the food item is junk food, create an array called
- * junkFood containing the following strings: "chips", "soda", "ice cream",
- * "popcorn", and "candy".
- *
- * Use Array's indexOf method to check if the foods array contains junk food.
- * Note that if an element is not found in the array, indexOf returns -1.
- * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
- *
- */
-
+// Methods in respective classes
 
  /* Steps 91 to 100
  *

@@ -1246,6 +1246,24 @@ class Vehicle {
   constructor(isOn) {
     this.isOn = isOn;
   }
+
+  /* Step 88
+  *
+  * Declare a Lightbulb method called flipSwitch that accepts a
+  * param string called on.  If on is the string "on", set
+  * the isOn property to true.  If on is any other string,
+  * set isOn to false.
+  * Return true if isOn is true, false otherwise.
+  *
+  */
+  flipSwitch(on) {
+    if(on === 'on') {
+      this.isOn = true;
+      return true;
+    }
+    this.isOn = false;
+    return false;
+  }
  }
 
 
@@ -1327,17 +1345,6 @@ var dinner = new Meal(dnr);
  /* Steps 81 to 90
  *
  * Create methods
- *
- */
-
-
- /* Step 88
- *
- * Declare a Lightbulb method called flipSwitch that accepts a
- * param string called on.  If on is the string "on", set
- * the isOn property to true.  If on is any other string,
- * set isOn to false.
- * Return true if isOn is true, false otherwise.
  *
  */
 

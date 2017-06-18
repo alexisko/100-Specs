@@ -1436,8 +1436,9 @@ var polygon = shpe.getType();
  * and assign the values to each variable below.
  *
  */
-var openAClosedBox;
-var closeAnOpenBox;
+ var box = new Box('stuff', false);
+var openAClosedBox = box.openBox();
+var closeAnOpenBox = box.openBox();
 
 
  /* Step 95

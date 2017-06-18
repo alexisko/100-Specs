@@ -1499,5 +1499,7 @@ var cookieMonsterBlocked = chocolateChip.swipedByCookieMonster('Friday');
  * and assign the values to each variable below.
  *
  */
-var badForYou;
-var goodForYou;
+ var arr = ['gyoza', 'meat', 'steak', 'candy'];
+ var diet = new Meal(arr);
+var badForYou = diet.containsJunkFood();
+var goodForYou = breakfast.containsJunkFood();

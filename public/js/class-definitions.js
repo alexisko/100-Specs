@@ -1195,6 +1195,16 @@ class Vehicle {
     this.size = size;
     this.color = color;
   }
+
+  /* Step 86
+   *
+   * Declare a Shoe method called findShoes that returns a string containing
+   * the color and size of the shoe ("Found red shoes of size 7").
+   *
+   */
+   findShoes() {
+    return "Found " + this.color + " shoes of size " + this.size;
+   }
  }
 
 

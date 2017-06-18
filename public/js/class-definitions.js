@@ -1163,6 +1163,23 @@ class Vehicle {
   constructor(isOpen) {
     this.isOpen = isOpen;
   }
+
+  /* Step 85
+  *
+  * Declare a Door method called openClose that opens the door
+  * if it is already closed, or closes the door if it is already open.
+  * Return true if openClose opens the door, false if openClose closes the door.
+  *
+  */
+  openClose() {
+    if(this.isOpen === false) {
+      this.isOpen = true;
+      return true;
+    } else {
+      this.isOpen = false;
+      return false;
+    }
+  }
  }
 
 
@@ -1288,14 +1305,6 @@ var dinner = new Meal(dnr);
  *
  */
 
-
- /* Step 85
- *
- * Declare a Door method called openClose that opens the door
- * if it is already closed, or closes the door if it is already open.
- * Return true if openClose opens the door, false if openClose closes the door.
- *
- */
 
 
 /* Step 86

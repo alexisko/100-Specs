@@ -1478,7 +1478,7 @@ var shortStory = twoStory.isATallStory(3);
  * and assign the values to each variable below.
  *
  */
- var lightbulb = new Lightbulb(false);
+var lightbulb = new Lightbulb(false);
 var kitchenLightsOn = lightbulb.flipSwitch('on');
 var porchLightsOff = lightbulb.flipSwitch();
 
@@ -1489,8 +1489,8 @@ var porchLightsOff = lightbulb.flipSwitch();
  * and assign the values to each variable below.
  *
  */
-var cookieMonsterPwns;
-var cookieMonsterBlocked;
+var cookieMonsterPwns = chocolateChip.swipedByCookieMonster('Monday');
+var cookieMonsterBlocked = chocolateChip.swipedByCookieMonster('Friday');
 
 
  /* Step 100

@@ -1458,8 +1458,8 @@ var closeAnOpenDoor = door.openClose();
  * and assign the values to each variable below.
  *
  */
-var redShoesSize7;
-var blackShoesSize10;
+var redShoesSize7 = rubySlippers.findShoes();
+var blackShoesSize10 = dressShoes.findShoes();
 
 
  /* Step 97

@@ -1134,6 +1134,22 @@ class Vehicle {
     this.contents = contents;
     this.isOpen = isOpen;
   }
+
+  /* Step 84
+   *
+   * Declare a Box method called openBox that opens the box
+   * if it is already closed.
+   * But it should not close the box if it is already open.
+   * Return true if openBox opens the box, false otherwise.
+   *
+   */
+   openBox() {
+    if(this.isOpen === false) {
+      this.isOpen = true;
+      return true;
+    }
+    return false;
+   }
  }
 
 
@@ -1269,16 +1285,6 @@ var dinner = new Meal(dnr);
  /* Steps 81 to 90
  *
  * Create methods
- *
- */
-
-
-/* Step 84
- *
- * Declare a Box method called openBox that opens the box
- * if it is already closed.
- * But it should not close the box if it is already open.
- * Return true if openBox opens the box, false otherwise.
  *
  */
 

@@ -1277,6 +1277,20 @@ class Cookie {
   constructor(flavor) {
     this.flavor = flavor;
   }
+
+  /* Step 89
+  *
+  * Declare a Cookie method called swipedByCookieMonster that accepts
+  * a param called dayOfTheWeek.  If the cookie's flavor is "chocolate"
+  * and the dayOfTheWeek is "Monday", return true.  Else return false.
+  *
+  */
+  swipedByCookieMonster(dayOfTheWeek) {
+    if(this.flavor === 'chocolate' && dayOfTheWeek === 'Monday') {
+      return true;
+    }
+    return false;
+  }
 }
 
 /**
@@ -1345,15 +1359,6 @@ var dinner = new Meal(dnr);
  /* Steps 81 to 90
  *
  * Create methods
- *
- */
-
-
- /* Step 89
- *
- * Declare a Cookie method called swipedByCookieMonster that accepts
- * a param called dayOfTheWeek.  If the cookie's flavor is "chocolate"
- * and the dayOfTheWeek is "Monday", return true.  Else return false.
  *
  */
 

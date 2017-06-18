@@ -1218,6 +1218,21 @@ class Vehicle {
   constructor(stories) {
     this.stories = stories;
   }
+
+  /* Step 87
+  *
+  * Declare a House method called isATallStory that accepts a
+  * param number called storiesTooTall.
+  * If the house's stories property is greater than or equal to
+  * storiesTooTall, return true, else return false.
+  *
+  */
+  isATallStory(storiesTooTall) {
+    if(this.stories >= storiesTooTall) {
+      return true;
+    }
+    return false;
+  }
  }
 
 
@@ -1312,25 +1327,6 @@ var dinner = new Meal(dnr);
  /* Steps 81 to 90
  *
  * Create methods
- *
- */
-
-
-
-/* Step 86
- *
- * Declare a Shoe method called findShoes that returns a string containing
- * the color and size of the shoe ("Found red shoes of size 7").
- *
- */
-
-
- /* Step 87
- *
- * Declare a House method called isATallStory that accepts a
- * param number called storiesTooTall.
- * If the house's stories property is greater than or equal to
- * storiesTooTall, return true, else return false.
  *
  */
 
